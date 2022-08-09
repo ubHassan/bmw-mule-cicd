@@ -26,7 +26,7 @@ jobs:
       with:
         java-version: 1.8
     - run: |
-      working-directory: ./mule-cicd
+      working-directory: ../mule-cicd
     - name: Print effective-settings (optional)
       run: mvn help:effective-settings
     - name: Build with Maven
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:    
     - run: |
-      working-directory: ./mule-cicd
+      working-directory: ../mule-cicd
     - uses: actions/checkout@v2
     - uses: actions/cache@v1
       with:
