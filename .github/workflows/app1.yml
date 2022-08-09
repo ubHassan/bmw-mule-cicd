@@ -26,7 +26,7 @@ jobs:
       with:
         java-version: 1.8
     - run: | 
-       cd mule-cicd
+       cd ./mule-cicd
     - name: Print effective-settings (optional)
       run: mvn help:effective-settings
     - name: Build with Maven
@@ -48,7 +48,7 @@ jobs:
     steps:    
     - uses: actions/checkout@v2
     - run: | 
-       cd mule-cicd
+       cd ./mule-cicd
     - uses: actions/cache@v1
       with:
         path: ~/.m2/repository
