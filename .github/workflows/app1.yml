@@ -25,8 +25,6 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - run: | 
-       cd ./mule-cicd
     - name: Print effective-settings (optional)
       run: mvn help:effective-settings
     - name: Build with Maven
@@ -47,8 +45,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:    
     - uses: actions/checkout@v2
-    - run: | 
-       cd ./mule-cicd
     - uses: actions/cache@v1
       with:
         path: ~/.m2/repository
