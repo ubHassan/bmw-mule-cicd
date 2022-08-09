@@ -5,6 +5,8 @@ name: Build and Deploy to Sandbox
 on:
   push:
     branches: [ main ]
+    paths:
+      - mule-cicd/**
   workflow_dispatch:
     
 jobs:
