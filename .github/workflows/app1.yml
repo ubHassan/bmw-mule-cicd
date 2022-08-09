@@ -2,8 +2,8 @@
 
 name: Build and Deploy App 1 to Sandbox
 defaults:
- run:
-  working-directory: ./mule-cicd
+ run: | 
+  cd mule-cicd
 on:
   push:
     branches: [ main ]
