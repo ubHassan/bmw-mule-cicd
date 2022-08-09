@@ -1,9 +1,7 @@
 # This workflow will build a MuleSoft project and deploy to CloudHub
 
 name: Test
-defaults:  
- run:  
-  working-directory: ./mule  
+
 on:
   push:
     branches: [ main ] 
