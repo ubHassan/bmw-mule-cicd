@@ -3,17 +3,14 @@
 name: Test
 defaults:
   run:
-    working-directory: mule-cicd
+    working-directory: ./mule-cicd
 on:
   push:
-    branches: [ main ]
-    paths:
-      - mule-cicd/**      
+    branches: [ main ] 
   workflow_dispatch:
-
     
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ls -d
+    - run: cd ./target
