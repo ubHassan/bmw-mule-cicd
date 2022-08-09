@@ -3,7 +3,7 @@
 name: Test
 defaults:
   run:
-    working-directory: ./mule-cicd
+    working-directory: /mule-cicd
 on:
   push:
     branches: [ main ] 
