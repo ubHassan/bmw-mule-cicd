@@ -1,0 +1,17 @@
+# This workflow will build a MuleSoft project and deploy to CloudHub
+
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - mule-cicd/**      
+  workflow_dispatch:
+
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - run: ls -d */
