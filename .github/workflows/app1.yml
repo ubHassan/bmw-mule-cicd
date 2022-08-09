@@ -6,14 +6,14 @@ on:
   push:
     branches: [ main ]
     paths:
-      - mule-cicd/**
+      - mule-cicd/**      
   workflow_dispatch:
+
     
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
     - uses: actions/cache@v1
       with:
         path: ~/.m2/repository
@@ -25,6 +25,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - run: |
+      working-directory: ./mule-cicd
     - name: Print effective-settings (optional)
       run: mvn help:effective-settings
     - name: Build with Maven
@@ -44,6 +46,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:    
+    - run: |
+      working-directory: ./mule-cicd
     - uses: actions/checkout@v2
     - uses: actions/cache@v1
       with:
